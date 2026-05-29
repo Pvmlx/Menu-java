@@ -43,8 +43,12 @@ public class Projeto {
             } else if (opcao == 3) {
                 System.out.println("Insira o valor que deseja recarregar: ");
                 double recarga = scanner.nextDouble();
-                saldo += recarga;
-                System.out.println("Recarga efetuada seu saldo agora é: " + saldo);
+                if(recarga < 0){
+                    System.out.println("Você não pode recarregar um valor negativo");
+                }else{
+                    saldo += recarga;
+                    System.out.println("Recarga efetuada seu saldo agora é: " + saldo);
+                }
             } else if (opcao == 4) {
                 System.out.println("Encerrando Sistema");
             }else{
